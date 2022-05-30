@@ -14,11 +14,11 @@
        
         <nav>
             <ul>
-                <li>service</li>
-                <li>préstation</li>
+                <li>Accueil</li>
+                <li>Films de mariages</li>
             </ul>
         </nav>
-        <h1>Video Production</h1>
+        <h1>Couronne Films</h1>
         <nav>
             <ul>
                 <li>À propos</li>
@@ -28,20 +28,23 @@
     </header>
     <main>
         <section class="herobanner">
-            <h2>Video production</h1>
-            <p>Videaste de mariage</p>
+            <video autoplay muted loop id="myVideo">
+                <source src="asset/heroban.mp4" type="video/mp4">
+              </video>
         </section>
         <section class="presentation">
             <div>
                 <h2>Vivre encore, le temps d’un film, les émotions d’un mariage hors du temps.</h2>
-            <p>En tant que videaste de mariage, j’aime capturer avec passion,<br> dans un domaine ou un château partout en France,<br> vos émotions de manière élégante et authentique</p>
-            <p>En tant que videaste de mariage, j’aime capturer avec passion,<br> dans un domaine ou un château partout en France,<br> vos émotions de manière élégante et authentique</p>
-            <p>En tant que videaste de mariage, j’aime capturer avec passion,<br> dans un domaine ou un château partout en France,<br> vos émotions de manière élégante et authentique</p>
+            <p>En tant que videastes de mariage, Nous capturons avec passion,<br> vos émotions de manière élégante et authentique,<br>dans un domaine ou un château partout en France </p>
+            <p>Créer un rêve qui perdure pour les couples à la recherche d'une façon vraiment unique de revivire leurs moments les plus précieux</p>
+            <p>Dans un film d’exception, Nous immortalisons la journée dans un style naturel et de manière discrète.Nous voulons que chaque vidéo soit un souvenir fidèle de l’histoire des mariés, qu’ils puissent revivre pour toujours.</p>
+            <p> Nos films de mariage sont autant de souvenirs pour la mariée et le marié, leur famille, leurs proches et les générations futures.<br> Avant tout, Nous voulons faire ressentir à nos spectateurs l’émotion qui émane du jour du mariage.</p>
             </div>
-            <img src="asset/test.jpeg" alt="">      
+            <img src="asset/test.jpg" alt="">      
         </section>
         <section class="banner">
-            <h2>VIDEASTE DE MARIAGE DOMAINE & CHÂTEAU</h2>
+            <h2>découvrez nos précedentes réalisations</h2>
+            <a href="">Galerie</a>
         </section>
         <section class="prestation">
             <h2>Préstation</h2>
@@ -76,21 +79,45 @@
             </ul>
         </section>
         <section class="about">
-            <img src="asset/test.jpeg" alt="">
-            <div>
+            <img src="asset/test.jpg" alt="">
+            <div class="abt">
                 <h2>A Propos</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut distinctio totam aperiam commodi impedit eaque dicta tempore optio! Provident nulla deleniti aut maiores optio vitae magnam consequatur possimus ea autem!</p>
+            <p>Couronne films est une agence composée de photographes et vidéastes expérimentés fournissant leurs services pour les céremonies de mariage dans toute la France</p>
+            <p>Notre équipe vous accompagne tout au long de votre évenement : Préparation des mariés, céremonie civile (Mairie),cérémonie laïque ou réligieuse,coktail / henné , et tout au long de la soirée.</p>
+            <p>Nous disposons d'un matériel de haute qualité (caméras , drone) afin de capturer ce jour de la plus belle des manières.</p>
             </div>
         </section>
+
         <section class="contact">
             <h2>Nous contacter</h2>
             <p>Pour plus de renseignement :</p>
             <ul>
-                <li>email@email.com</li>
-                <li>0102030405</li>
+                <li>
+                    <h3>Par Mail :</h3>
+                    <p>contact@couronnefilms.com</p>
+                </li>
+                <li>
+                    <h3>Par Téléphone :</h3>
+                    <p>07 65 54 25 82</p>
+                </li>
             </ul>
+            <h3>Vous ne trouvez pas la Réponse à votre question ? </h3>
+            <p> Notre Service Relation Client est à votre disposition via ce formulaire de contact :</p>
+                <form action="index.html" method="post">
+                    <input type="text" id="nom" name="nom" placeholder="Nom" aria-required="true"  autofocus>
+    
+                    <input type="text" id="prenom" name="prenom" placeholder="Prénom" aria-required="true">
+    
+                    <input type="email" id="email" name="email" placeholder="email" aria-required="true">
+        
+                    <input type="text" id="phone" name="phone" aria-label="télephone" placeholder="télephone" aria-required="true">
+    
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Votre message"></textarea>
+    
+                    <input id="btn-val" type="submit" value="Envoyer" aria-label="cliquez pour envoyer">
+                </form>
         </section>
     </main>
-    <footer>&copy; Video Production - 2022</footer>
+    <footer>&copy; couronne films 2022 - all right reserved</footer>
 </body>
 </html>

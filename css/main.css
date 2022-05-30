@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Roboto:wght@100;500&family=Satisfy&display=swap');
 p{
     font-family: 'Roboto';
 }
 header {
-  border: thin black solid;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
@@ -11,7 +10,7 @@ header {
 }
 h1 {
   font-size: 4rem;
-  font-family: 'Roboto';
+  font-family: 'satisfy';
 }
 nav {
   display: flex;
@@ -26,14 +25,14 @@ nav > ul {
 nav > ul > li {
   width: 100%;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-family: 'Roboto';
   font-weight: 300;
 }
 .herobanner {
-  height: 90vh;
-  background-image: url(https://i0.wp.com/greenantlersphotography.com/wp-content/uploads/2019/02/wedding-reception-entertainment-ideas-green-antlers-photography-40.jpg?fit=2047%2C1365&ssl=1);
+  height: fit-content;
   background-size: cover;
+  overflow: hidden;
 }
 .herobanner > h2 {
   font-size: 6rem;
@@ -42,6 +41,7 @@ nav > ul > li {
   left: 50%;
   transform: translate(-50%);
   color: white;
+  font-family: 'karla';
 }
 .herobanner > p {
     color: white;
@@ -54,13 +54,20 @@ nav > ul > li {
 .presentation {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 8rem;
+  gap: 4rem;
+  overflow: hidden;
+}
+.presentation>img{
+    width: 100%;
+
 }
 .presentation > div {
   display: flex;
   flex-direction: column;
   gap: 4rem;
   justify-content: center;
+  z-index: 1;
+  background-color: #fff;
 }
 .presentation > div > h2 {
   font-size: 3.2rem;
@@ -72,42 +79,69 @@ nav > ul > li {
   margin-left: 8rem;
 }
 .banner {
-  height: 50vh;
+  height: 75vh;
   background-color: rgb(255, 255, 255);
-  border: thin solid black;
+  background-image: url('../asset/18.jpeg');
+  background-size: cover;
+  text-align: center;
 }
-.banner > h2 {
+.banner > h2,a {
+    font-family: 'Satisfy';
+    color:#fff;
   font-size: 4rem;
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-35%);
+  top: 45%;
+
+}
+.banner h2 {
+    margin-bottom: 2rem;
+}
+.banner>a{
+    border: thin white solid;
+    padding:1rem 4rem 1rem 4rem;
+}
+.banner>a:hover{
+    background-color: rgb(38, 38, 38);
+    transition: all 0.3s ease-in-out;
+    
 }
 .prestation{
+    display: none;
     height: 65vh;
-    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
     gap:1rem;
 }
 .prestation>h2{
-    margin-top: 2rem;
     font-size: 4rem;
     font-family: 'Satisfy';
 }
 .presta{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    margin: 2rem;
+}
+.presta>li{
+    display: flex;
+    flex-direction: column;
 }
 .presta>li>h3{
     font-size: 3rem;
     margin-bottom: 2rem;
     font-family: 'Satisfy';
 }
+.presta>li>h3::before{
+    content: "- ";
+}
+.presta>li>h3::after{
+    content: " -";
+}
 .presta>li>ul>li{
     font-size: 1.6rem;
     font-family: 'Roboto';
+    list-style:'-';
 }
 .presta>li>ul>li:last-child{
     font-size: 3.2rem;
@@ -116,8 +150,21 @@ nav > ul > li {
 }
 
 .about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: rgb(38, 38, 38);
+    color: #fff;
+}
+.about>img{
+    width: 100%;
+}
+.abt{
     display: flex;
-    gap: 6rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    text-align: center;
 }
 .about>div>h2{
     font-size: 4rem;
@@ -125,14 +172,64 @@ nav > ul > li {
 }
 .about>div>p{
     font-size: 1.6rem;
+    width: 30vw;
+}
+.contact{
+    background-color: rgb(255, 255, 255);
+    color: rgb(53, 53, 53);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
 }
 .contact>h2{
     font-size: 4rem;
     font-family: 'Satisfy';
     text-align: center;
-    margin: 4rem;
+    margin-top: 2rem;
+
 }
 .contact>p{
     font-size: 2.6rem;
     text-align: center;
+}
+.contact>ul{
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20vw;
+}
+.contact>ul>li>h3,.contact>h3{
+    font-family: 'Satisfy';
+    font-size: 3rem;
+    text-align: center;
+    padding: 1.6rem;
+}
+.contact>ul>li>p{
+    text-align: center;
+    font-size: 2rem;
+}
+.contact>fieldset{
+    width: fit-content;
+}
+.contact>form{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+.contact>form>input,textarea{
+    font-size: 1.6rem;
+    font-family: 'Roboto';
+    background-color: rgb(240, 240, 240);
+    padding: 2rem;
+}
+footer{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    font-family: 'Roboto';
+    
 }

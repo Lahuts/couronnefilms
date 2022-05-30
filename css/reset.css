@@ -20,7 +20,8 @@ a{
     text-decoration: none ;
     color: #222;
 }
-button, input, select, option{
+button, input,textarea, select, option{
     background: none;
     border: 0;
+    resize: none;
 }
