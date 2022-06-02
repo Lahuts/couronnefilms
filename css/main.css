@@ -2,11 +2,18 @@
 p{
     font-family: 'Roboto';
 }
+html{
+    scroll-behavior: smooth;
+}
 header {
+  position: sticky;
+  top: 0%;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
   padding: 2rem;
+  background-color: #fff;
 }
 h1 {
   font-size: 4rem;
@@ -22,12 +29,16 @@ nav > ul {
   gap: 2rem;
   align-items: center;
 }
-nav > ul > li {
+nav > ul>li {
   width: 100%;
   text-align: center;
-  font-size: 2rem;
-  font-family: 'Roboto';
-  font-weight: 300;
+
+}
+nav > ul >li >a {
+    font-size: 2rem;
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: #000;
 }
 .herobanner {
   height: fit-content;
@@ -232,4 +243,59 @@ footer{
     margin-bottom: 4rem;
     font-family: 'Roboto';
     
+}
+.modal-grid{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+margin: 4rem;
+gap: 2rem;
+}
+.modal-grid>li>img{
+    width:100%;
+    height:100%;
+
+}
+.video-dis{
+    width: 100vw;
+}
+.video-dis>video{
+    width: 100vw;
+}
+
+@media screen and (max-width:768px) {
+    header{
+        grid-template-columns: repeat(1,1fr);
+    }
+    nav{
+        display: none;
+    }
+    .herobanner{
+        justify-content: center;
+    }
+    .presentation{
+        display: flex;
+        flex-direction: column;
+    }
+    .about{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact>ul{
+        gap: 0;
+    }
+    .presentation>div>p,.presentation>div>h2{
+        margin-left: 1rem;
+    }
+    .banner{background-position: center;
+
+    }
+    .about>div>p{
+        width: 90vw;
+    }
+    .abt{
+        padding-bottom: 2rem;
+    }
+    .contact>ul{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
