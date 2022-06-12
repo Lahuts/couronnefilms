@@ -16,6 +16,7 @@ header {
   background-color: #fff;
 }
 h1 {
+    color: #000;
   font-size: 4rem;
   font-family: 'satisfy';
 }
@@ -96,7 +97,7 @@ nav > ul >li >a {
   background-size: cover;
   text-align: center;
 }
-.banner > h2,a {
+.banner > h2,.banner>a {
     font-family: 'Satisfy';
     color:#fff;
   font-size: 4rem;
@@ -127,6 +128,9 @@ nav > ul >li >a {
 .prestation>h2{
     font-size: 4rem;
     font-family: 'Satisfy';
+}
+.mobile-title{
+    display: none;
 }
 .presta{
     display: grid;
@@ -261,12 +265,15 @@ gap: 2rem;
 .video-dis>video{
     width: 100vw;
 }
+.contact>form>input:last-child(){
+    background-color: rgb(38, 38, 38);
+}
 
 @media screen and (max-width:768px) {
     header{
         grid-template-columns: repeat(1,1fr);
     }
-    nav{
+    nav,.herobanner{
         display: none;
     }
     .herobanner{
@@ -275,6 +282,15 @@ gap: 2rem;
     .presentation{
         display: flex;
         flex-direction: column;
+    }
+    .presentation>div>p{
+        display: none;
+    }
+    .pc-title{
+        display: none;
+    }
+    .mobile-title{
+        display: block;
     }
     .about{
         display: flex;
@@ -298,4 +314,99 @@ gap: 2rem;
     .contact>ul{
         grid-template-columns: repeat(1,1fr);
     }
+    .contact>form{
+        width: 95%;
+    }
+
 }
+/*Test Modale */
+/*Gere la fenetre avec l'assombrisement*/
+.bc-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    min-height: 200vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+
+    color: #222;
+}
+/*Gere la fenetre blanche */
+.bc-modal .fr-modal{
+    display: flex;
+    position: fixed;
+    max-width: 80vw;
+    left: 10%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 1rem rgba(0,0,0,0.6);
+    z-index: -1;
+    cursor: pointer;
+}
+
+.modal-info > h3{
+    text-align: start;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.fr-modal > section{
+    width: 19em;
+    background-color: rgba(63, 63, 63, 0.719);
+    color: #fff;
+}
+.fr-modal>section > ul{
+    line-height: 2em;
+}
+.fr-modal>section > ul > li{
+    font-weight: 500;
+    
+}
+.modale-active{
+    z-index: 2;
+    opacity: 2;
+    transform-origin: center center;
+}
+iframe{
+    border:0;
+}
+/* Test */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3.2em;
+    height: 3.2em;
+    opacity: 0.3;
+    z-index: 1;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    content: ' ';
+    height: 2em;
+    width: 0.1em;
+    background-color: rgb(120, 120, 120);
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  .fr-modal>img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
