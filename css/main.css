@@ -375,6 +375,13 @@ gap: 2rem;
 iframe{
     border:0;
 }
+button{
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    padding: 2rem;
+    font-weight: 500;
+    font-family: 'roboto';
+}
 /* Test */
 .close {
     position: absolute;
